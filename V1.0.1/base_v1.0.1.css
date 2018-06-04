@@ -22,9 +22,15 @@ hr{border:none;height:0;border-top: 1px solid #000000;}/*以上边框为 线宽 
 border-top-width   属性设置一个元素的顶部边框的粗细；
 border-top-color  设置元素的上边框的颜色。*/
 
+/*解决某些手机 input 标签出现灰白色背景色*/
+input{background-color:transparent;filter:alpha(opacity=0)}
+
 /*钩子,去掉这些废弃标签的属性，把他们当成空盒子使用，下面三个都是行内标签*/
 s, i, em {font-style: normal;text-decoration: none;}
 /*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
+
+
+
 
 /*功能型*/
 /*↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
@@ -47,7 +53,7 @@ i.font{display:inline-block;height:100%;vertical-align: middle;}
 i.img{display: inline-block;}
 
 /*其它*/
-input[type="txt"],button{height:2em}
+input[type="txt"]，input[type="password"],button{height:2em}
 .hidden{visibility:hidden}
 .none{display:none}
 .fb{font-weight:bold}
