@@ -27,8 +27,15 @@ input{background-color:transparent;filter:alpha(opacity=0)}
 
 /*钩子,去掉这些废弃标签的属性，把他们当成空盒子使用，下面三个都是行内标签*/
 s, i, em {font-style: normal;text-decoration: none;}
-/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
+/* 字体大小 */
+/* 表单元素的字体不能继承需要单独设置*/
+/* input, label, select, option, textarea, button, fieldset, legend { font-size:12px;}  /* PC端使用px作为单位 */
+input, label, select, option, textarea, button, fieldset, legend { font-size:0.24rem;}  /* 移动端使用rem作为单位 */
+/* 如果字体单位是相对单位，需要给字体大小设置一个默认的相对单位的值，避免默认的px单位的字体，不能自适应*/
+body{ font-size: 0.24rem }
+
+/*↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑*/
 
 
 
