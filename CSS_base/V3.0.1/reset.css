@@ -1,0 +1,41 @@
+/* div、li,table,th,td 默认没有margin、padding值；dt标签有默认的margin与padding值就是0；button默认margin为0，有padding； */
+body{background-color:#fff;min-height: 100vh;} /* 不同的浏览器背景色不一致 */
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dd, form{ margin:0;}
+button,input,textarea{padding: 0;}
+button{outline:none;border:none;}   /* outline 解决点击后，有蓝色外边框 */
+ol,ul{margin:0; padding:0;}
+
+table{border-collapse: collapse; border-spacing: 0}
+fieldset, img{border: 0}
+address,caption,cite,code,dfn,th,var{font-style: normal;font-weight: normal}
+ol,ul{list-style: none;}
+a{text-decoration: none;color: inherit;}
+input,select{background-color: transparent;filter: alpha(opacity=0);}  /* 去掉控件默认背景色 */
+
+.fleft{float: left;}  
+.fr{float: right;}
+/*相当于内墙法*/
+/* // .clearfix:before,
+// .clearfix:after {content: "";display: table;}
+// .clearfix:after {clear: both;} */
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix {*zoom: 1; /*IE/7/6*/}
+
+/* // 下面的属于项目中的样式，不是所有的项目通用的。根据实际情况加入 */
+.tc{
+  text-align: center;
+}
+.tl{
+  text-align: left;
+}
+.tr{
+  text-align: right;
+}
+.vm{
+  vertical-align: middle;
+}
+.pr {
+  position: relative
+}
+
+/* 注意：显示样式的标签不要给她重置样式，因为，后管编辑器(富文本)，编辑的文本，都是带有这种样式标签的 em、i、s、strong*/
