@@ -37,4 +37,4 @@ input,select{background-color: transparent;filter: alpha(opacity=0);}  /* 去掉
   position: relative
 }
 
-/* 注意：显示样式的标签不要给她重置样式，因为，后管编辑器，编辑的文本，都是带有这种样式标签的 em、i、s、strong*/
+/* 注意：显示样式的标签不要给她重置样式，因为，后管编辑器(富文本)，编辑的文本，都是带有这种样式标签的 em、i、s、strong*/
