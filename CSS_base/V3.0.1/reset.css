@@ -2,17 +2,19 @@
 body{background-color:#fff;} /* 不同的浏览器底板背景色不一致。浏览器底板的颜色，从body获取 */
 body{font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;}
 body, h1, h2, h3, h4, h5, h6, hr, p, dl, dd, form{ margin:0;}
-button,input,textarea{padding: 0;}
-textarea{resize:none;}
-button{outline:none;border:none;}   /* outline 解决点击后，有蓝色外边框 */
-ol,ul{margin:0; padding:0;}
 
+textarea{resize:none;}
+button,input,textarea{padding: 0;}
+button{outline:none;border:none;}   /* outline 解决点击后，有蓝色外边框 */
+input{outline: none;}
+input,select{background-color: transparent;filter: alpha(opacity=0);}  /* 去掉控件默认背景色 */
+
+ol,ul{margin:0; padding:0;}
 table{border-collapse: collapse; border-spacing: 0}
 fieldset, img{border: 0}
 address,caption,cite,code,dfn,th,var{font-style: normal;font-weight: normal}
 ol,ul{list-style: none;}
 a{text-decoration: none;color: inherit;}
-input,select{background-color: transparent;filter: alpha(opacity=0);}  /* 去掉控件默认背景色 */
 
 .fleft{float: left;}  
 .fr{float: right;}
