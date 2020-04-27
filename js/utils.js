@@ -26,13 +26,29 @@ function dateFormater(formater, t) {
  * @param {Number} wait [节流控制时间]
  */
 function throttle(func, wait) {
-    let timer = null;
-    return function(...args) {
-      if (!timer) {
-        func(...args);
-        timer = setTimeout(() => {
-          timer = null;
-        }, wait);
-      }
-    }
+	let timer = null;
+	return function(...args) {
+	  if (!timer) {
+		func(...args);
+		timer = setTimeout(() => {
+		  timer = null;
+		}, wait);
+	  }
+	}
+}
+  
+/* 对localStorage的封装 */
+export const storage = {
+  get (key) {
+    return JSON.parse(localStorage.getItem(key))
+  },
+  set (key, value) {
+    localStorage.setItem(key, JSON.stringify(value))
+  },
+  clear () {
+    localStorage.clear()
+  },
+  removeItem (key) {
+    localStorage.removeItem(key)
   }
+}

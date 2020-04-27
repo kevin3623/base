@@ -1,7 +1,7 @@
 /* div、li,table,th,td 默认没有margin、padding值；dt标签有默认的margin与padding值就是0；button默认margin为0，有padding； */
 body{background-color:#fff;} /* 不同的浏览器底板背景色不一致。浏览器底板的颜色，从body获取 */
 body{font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;}
-body, h1, h2, h3, h4, h5, h6, hr, p, dl, dd, form{ margin:0;}
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dd, form, figure{ margin:0;}
 
 textarea{resize:none;}
 button,input,textarea{padding: 0;}
