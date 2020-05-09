@@ -109,3 +109,26 @@ export function post (url, params) {
       })
   })
 }
+
+/**
+* 上传文件
+* @param {String} url [请求的url地址]
+* @param {Object} FormData [FormData对象]
+*/
+export function uploadFile (url, FormData) {
+    // TODO: 显示loading
+  return new Promise((resolve, reject) => {
+    axios.post(url, FormData, {
+      headers: {'Content-Type': 'multipart/form-data'}
+    })
+      .then(res => {
+        // TODO: 隐藏loading
+        resolve(res.data)
+      })
+      .catch(err => {
+        // TODO: 隐藏loading
+        errorHandler(err)
+        reject(err)
+      })
+  })
+}
