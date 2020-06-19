@@ -3,7 +3,7 @@
  * @param {String} formater 日期格式
  * @param {字符串} t 创建时间
  */
-function dateFormater(formater, t) {
+export function dateFormater(formater, t) {
   let date = t ? new Date(t) : new Date(),
       Y = date.getFullYear() + '',
       M = date.getMonth() + 1,
@@ -25,7 +25,7 @@ function dateFormater(formater, t) {
  * @param {Function} func [需要节流的函数]
  * @param {Number} wait [节流控制时间]
  */
-function throttle(func, wait) {
+export function throttle(func, wait) {
 	let timer = null;
 	return function(...args) {
 	  if (!timer) {
@@ -36,19 +36,69 @@ function throttle(func, wait) {
 	  }
 	}
 }
-  
-/* 对localStorage的封装 */
-export const storage = {
-  get (key) {
-    return JSON.parse(localStorage.getItem(key))
-  },
-  set (key, value) {
-    localStorage.setItem(key, JSON.stringify(value))
-  },
-  clear () {
-    localStorage.clear()
-  },
-  removeItem (key) {
-    localStorage.removeItem(key)
-  }
+
+/* 下载 */
+export function download (url, name) {
+  const a = document.createElement('a')
+  a.download = name
+  a.rel = 'noopener'
+  a.href = url
+  // 触发模拟点击
+  a.dispatchEvent(new MouseEvent('click'))
+  // 或者 a.click(
 }
+
+/* 对url的各种操作 start     参考：https://q.cnblogs.com/q/21487/        
+   需求说明：
+        1、提取url上的参数
+        2、删除url上的某个参数
+        3、给url添加上某个参数
+
+*/
+// 删除某个参数
+export function delQueStr(url, ref) //删除参数值
+{
+    var str = "";
+
+    if (url.indexOf('?') != -1)
+        str = url.substr(url.indexOf('?') + 1);
+    else
+        return url;
+    var arr = "";
+    var returnurl = "";
+    var setparam = "";
+    if (str.indexOf('&') != -1) {
+        arr = str.split('&');
+        for (i in arr) {
+            if (arr[i].split('=')[0] != ref) {
+                returnurl = returnurl + arr[i].split('=')[0] + "=" + arr[i].split('=')[1] + "&";
+            }
+        }
+        return url.substr(0, url.indexOf('?')) + "?" + returnurl.substr(0, returnurl.length - 1);
+    }
+    else {
+        arr = str.split('=');
+        if (arr[0] == ref)
+            return url.substr(0, url.indexOf('?'));
+        else
+            return url;
+    }
+}
+// js 为url字符串添加、修改参数。       参考： https://www.cnblogs.com/xiaoruilin/p/11301802.html
+export function editUrlParam(url, paramName, replaceWith) {
+    if (url.indexOf(paramName) > -1) {
+        var re = eval('/(' + paramName + '=)([^&]*)/gi');
+        url = url.replace(re, paramName + '=' + replaceWith);
+    } else {
+        var paraStr = paramName + '=' + replaceWith;
+
+        var idx = url.indexOf('?');
+        if (idx < 0)
+            url += '?';
+        else if (idx >= 0 && idx != url.length - 1)
+            url += '&';
+        url=url + paraStr;
+    }
+    return url;
+};
+/* 对url字符串的操作 end */
