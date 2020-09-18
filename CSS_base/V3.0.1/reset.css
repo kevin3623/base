@@ -8,7 +8,7 @@ body{
   overflow: scroll;
   font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
-body, h1, h2, h3, h4, h5, h6, hr, p, dl, dd, form, figure{ margin:0;}
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dd, form, figure, pre{ margin:0;}
 
 textarea{resize:none;}
 button,input,textarea{padding: 0;}
