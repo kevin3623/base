@@ -1,12 +1,10 @@
 /* div、li,table,th,td 默认没有margin、padding值；dt标签有默认的margin与padding值就是0；button默认margin为0，有padding； */
 html{
   background-color:#fff;  /* 不同的浏览器底板背景色不一致。浏览器底板的颜色，从html获取 */
-  overflow: hidden;  /* 禁止ios中底板回弹效果 */
 }
 body{
-  max-height: 100vh;
-  overflow: scroll;
   font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  user-select: none;
 }
 body, h1, h2, h3, h4, h5, h6, hr, p, dl, dd, form, figure, pre{ margin:0;}
 
@@ -23,7 +21,7 @@ address,caption,cite,code,dfn,th,var{font-style: normal;font-weight: normal}
 ol,ul{list-style: none;}
 a{text-decoration: none;color: inherit;}
 
-.fleft{float: left;}  
+.fleft{float: left;}
 .fr{float: right;}
 /*相当于内墙法*/
 /* // .clearfix:before,
