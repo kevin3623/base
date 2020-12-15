@@ -4,7 +4,6 @@ html{
 }
 body{
   font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-  user-select: none;
 }
 body, h1, h2, h3, h4, h5, h6, hr, p, dl, dd, form, figure, pre{ margin:0;}
 
@@ -21,8 +20,11 @@ address,caption,cite,code,dfn,th,var{font-style: normal;font-weight: normal}
 ol,ul{list-style: none;}
 a{text-decoration: none;color: inherit;}
 
+.pointer{
+  cursor:pointer; /* 鼠标悬浮变"手" */
+}
 .fleft{float: left;}
-.fr{float: right;}
+.fright{float: right;}
 /*相当于内墙法*/
 /* // .clearfix:before,
 // .clearfix:after {content: "";display: table;}
