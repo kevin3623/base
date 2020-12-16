@@ -10,6 +10,22 @@ import * as sysUser from './modules/sys-user'
 import * as sysDict from './modules/sys-dict'
 import * as upload from './modules/upload'
 
+/* 上面一个目录下的 导入 功能，可以使用 require.context 实现自动导入功能 */
+// 参考如下：
+/* const files = require.context('.', false, /\.js$/)
+const modules = {}
+
+files.keys().forEach(key => {
+  if (key === './index.js') return
+  modules[key.replace(/(\.\/|\.js)/g, '')] = files(key).default
+})
+
+export default modules
+ */
+
+
+
+
 // tips
 // 1. 开启/关闭[业务模块]拦截, 通过调用fnCreate方法[isOpen参数]设置.
 // 2. 开启/关闭[业务模块中某个请求]拦截, 通过函数返回对象中的[isOpen属性]设置.
